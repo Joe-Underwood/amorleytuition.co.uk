@@ -1,0 +1,381 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Raleway, sans-serif;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptug8zYS_SKggPNyC0ITw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/*------nav bar----------------*/
+#toggle {
+    display: none;
+}
+
+#hidden {
+    transform: translateX(150px);
+    opacity: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.side-menu {
+    grid-area: 2 / 2 / 3 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    transition: all 0.3s;
+}
+
+.nav-links {
+    display: none;
+}
+
+nav {
+    display: grid;
+    grid-template: 97px 150px / auto 150px;
+    grid-gap: 0;
+    margin: 0;
+    width: 100%;
+    position: fixed;
+}
+
+    nav ul {
+        list-style: none;
+    }
+
+.nav-items {
+    grid-area: 1 / 1 / 1 / 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 73px;
+}
+
+    .nav-items h1 {
+        margin-left: 25px;
+        padding: 0;
+    }
+
+    .nav-items label {
+        margin-right: 25px;
+    }
+
+.headerFull {
+    background-color: hsla(0, 0%, 20%, 0);
+    z-index: 5;
+    height: 97px;
+    transition: all 0.5s;
+}
+
+    .headerFull label {
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    .headerFull .nav-items {
+        height: 97px;
+    }
+
+    .headerFull a {
+        text-decoration: none;
+        color: hsla(0, 0%, 20%, 1.0);
+    }
+
+    .headerFull ul a {
+        text-decoration: none;
+        color: hsla(0, 0%, 20%, 1.0);
+        font-weight: bold;
+        transition: all 0.2s ease 0s;
+        font-size: 1em;
+    }
+
+        .headerFull ul a:hover {
+            color: black;
+        }
+
+.headerAfter {
+    background-color: hsla(0, 0%, 20%, 1.0);
+    color: lightgrey;
+    z-index: 5;
+    height: 73px;
+    transition: all 0.5s;
+}
+
+    .headerAfter label {
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    .headerAfter .nav-items {
+        height: 73px;
+    }
+
+    .headerAfter a {
+        text-decoration: none;
+        color: hsla(178, 0%, 85%, 1.0);
+        font-size: 0.75em;
+    }
+
+    .headerAfter ul a {
+        text-decoration: none;
+        color: hsla(178, 0%, 85%, 1.0);
+        font-weight: bold;
+        transition: all 0.2s ease 0s;
+        font-size: 0.9em;
+    }
+
+        .headerAfter ul a:hover {
+            color: white;
+        }
+
+    .headerAfter .side-menu {
+        background-color: hsla(0, 0%, 20%, 0.8);
+    }
+
+.tuition {
+    color: hsla(199, 76%, 57%, 1.0);
+}
+
+/*---------banner---------*/
+.graphic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    padding: 12% 10% 10% 10%;
+    font-weight: 900;
+    color: hsla(178, 0%, 85%, 1.0);
+    background-color: hsla(199, 76%, 30%, 0.4);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: luminosity;
+    background-attachment: fixed;
+    z-index: 4;
+    height: 400px;
+}
+
+    .graphic h1 {
+        font-size: 30px;
+    }
+
+    .graphic p {
+        font-size: 17px;
+    }
+
+/*------------section-class----------*/
+.section {
+    background-color: lightgrey;
+    height: auto;
+    display: block;
+    position: relative;
+    color: hsla(178, 0%, 30%, 1.0);
+}
+
+.section-header {
+    padding-top: 50px;
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 900;
+    margin: 0 15%;
+}
+
+.section-content {
+    width: 75%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    font-size: 17px ;
+    text-align: left;
+    height: auto;
+    overflow: hidden;
+    padding: 20px 20px 50px 20px;
+}
+
+.background-strip {
+    height: auto;
+    width: 75%;
+    display: block;
+    margin: auto;
+    background-color: hsla(0, 0%, 20%, 0.8);
+}
+
+/*-----------about-me section--------*/
+.about-me .section-content {
+    display: block;
+}
+
+.about-me p {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.profile {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+}
+
+.profile img {
+    width: 200px;
+    height: 100%;
+}
+
+.profile li {
+    padding: 5px;
+}
+
+
+/*-----------lessons section--------*/
+.lessons {
+    color: hsla(178, 0%, 85%, 1.0);
+    background-color: hsla(199, 76%, 30%, 0.4);
+    background-image: url("IMG_2764.JPG");
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: luminosity;
+    background-attachment: fixed;
+}
+
+    .lessons .section-content {
+        width: 100%;
+    }
+
+/*---------contact form----------*/
+.contact {
+    background-color: white
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+}
+
+    .contact-form div,
+    .contact-form h1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-bottom: 25px;
+    }
+
+#message {
+    height: 150px;
+    resize: vertical;
+}
+
+/*--------footer-------*/
+
+footer {
+    width: 100%;
+    height: 75px;
+    position: relative;
+    background-color: hsla(0, 0%, 20%, 1.0);
+}
+
+
+/*------------media transition-------------*/
+
+@media screen and (min-width: 743px) {
+
+    .graphic h1 {
+        font-size: 45px;
+    }
+
+    .graphic p {
+        font-size: 25px;
+    }
+
+    .nav-links {
+        display: block;
+    }
+
+    nav label {
+        display: none;
+    }
+
+    .side-menu {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        position: fixed;
+    }
+
+    .nav-links {
+        margin-right: 25px;
+    }
+
+    nav ul li {
+        display: inline-block;
+        padding: 20px;
+    }
+
+    .about-me .section-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .about-me p {
+        margin-right: auto;
+        padding-right: 20px;
+    }
+
+    .profile {
+        margin-left: auto;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        height: 100%;
+    }
+
+        .profile img {
+            width: 100%;
+            height: auto;
+        }
+
+        .profile ul {
+            width: 100%;
+        }
+
+            .profile li {
+                font-size: 15px;
+            }
+}

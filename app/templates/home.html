@@ -1,0 +1,108 @@
+﻿<html>
+<head>
+
+    <title>Adam Morley Tuition</title>
+    <link rel="stylesheet" href="/static/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+
+    <nav class="headerFull">
+        <div class="nav-items">
+            <h1><a href="/">Adam Morley <span class="tuition">Tuition</span></a></h1>
+            <label for="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle">
+        </div>
+        <ul class="nav-links">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about-me">About Me</a></li>
+            <li><a href="/lessons">Lessons</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+        <ul class="side-menu" id="hidden">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about-me.html">About Me</a></li>
+            <li><a href="lessons.html">Lessons</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="graphic">
+        <h1>Adam Morley Tuition</h1>
+        <p>Online ESL and Maths Tuition For 11-16 Year Olds</p>
+    </div>
+
+    <section class="section about-me">
+        <h1 class="section-header">About Me</h1>
+        <div class="section-content">
+            <p>
+                My name's Adam, and I'm a CELTA qualified ESL teacher and Maths tutor from Cambridge, UK with over 400 hours of experience.<br><br>
+                I love travelling and have taught English all over the world, to adults in England and children in Peru. Because of my experience I always aim to teach you practical language skills to help you survive in an English speaking country.<br><br>
+                Whatever your goals I can help you attain confidence and fluency in written and spoken English.<br><br>
+                I look forward to hearing from you!
+            </p>
+            <div class="profile">
+                <img src="\static\profileBrazil.jpg">
+                <ul>
+                    <li>MSc (Hons) Mathematics (1st Class) University of Nottingham</li>
+                    <li>CELTA Qualified</li>
+                    <li>400+ Hours of Experience</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section lessons">
+        <div class="background-strip">
+            <h1 class="section-header">Lessons</h1>
+            <div class="section-content">
+                <p>
+                    Maths: <br><br>
+                    I tend to start with a 5 minute review of the previous lesson, followed by an introduction to today's topic. We then work through problems of increasing difficulty. We then finish with an exam style question.
+                    <br><br><br>
+                    EFL: <br><br>
+                    I tend to start with 5 minutes of light conversation to refresh our memory of the previous lesson. I then introduce the topic of the lesson, along with some real-world examples. I like to finish with free conversation in order to encourage speaking fluency.
+                    <br><br>
+                    Please note that these are rough guides and I will always adapt the lesson to suit your preferences. I also welcome any contribution to the structure or content of the lesson.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact">
+        <h1 class="section-header">Contact</h1>
+        <div class="contact-form-box">
+            <form method="post" class="contact-form section-content">
+                {{ form.hidden_tag() }}
+                <div>
+                    {{ form.name.label }}
+                    {{ form.name(placeholder="Your Name") }}
+                </div>
+                <div>
+                    {{ form.email.label }}
+                    {{ form.email(placeholder="Your Email Address") }}
+                </div>
+                <div>
+                    {{ form.message.label }}
+                    {{ form.message(placeholder="Your Message") }}
+                </div>
+                {{ form.submitButton }}
+            </form>
+            <h1 class="submit-message hidden">Thanks!</h1>
+            <h1 class="fail-message hidden">Something Went Wrong!</h1>
+        </div>
+    </section>
+
+    <footer>
+    </footer>
+
+
+    <script src="/static/main.js"></script>
+
+</body>
+
+</html>
